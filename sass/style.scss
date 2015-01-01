@@ -13,8 +13,6 @@
 * 
 */
 
-@charset "UTF-8";
-
 
 //  Configuration of the stylesheet
 //-------------------------------------
@@ -43,9 +41,9 @@
 //  UI components
 //---------------------------------
 //@import "partials/ui/grid";
-//@import "partials/ui/burger";
 //@import "partials/ui/dialog";
-//@import "partials/ui/button";
+//@import "partials/ui/burger";
+@import "partials/ui/button";
 
 
 //	Layout

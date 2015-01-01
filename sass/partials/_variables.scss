@@ -29,7 +29,11 @@ $color-secondary:       red !default;
 $color-text-primary:    #343434 !default;
 $color-text-secondary:  #757575 !default;
 $color-link:            $color-primary !default;
-$color-body:            #F2F2F2 !default;
+$color-body:            #F4F6FA !default;
+$color-info:            #144E93 !default;
+$color-error:           #991717 !default;
+$color-warning:         #D8CA21 !default;
+$color-success:         #237F0D !default;
 
 
 // 2 - ## Typography
@@ -87,7 +91,7 @@ $screen-large-up:   1201px !default;
 // 4 - ## User Interface
 
 // Animations
-$animation-duration: 600ms !default;
+$animation-duration: 400ms !default;
 
 // Form elements
 $input-padding:             5px 10px !default;

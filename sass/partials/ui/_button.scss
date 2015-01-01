@@ -1,17 +1,15 @@
-//=============================================
-//
-//  partials/ui/_button.scss
-//  Module graphique en charge de l'aspect
-//  de tous les boutons
-//
-//  @auteur: Emmanuel KWENE
-//  @email: kwene.emmanuel@gmail.com
-//  @siteweb: http://emmanuelkwene.com/
-//
-//=============================================
-
-//  Module bouton
-//===============
+/**
+*
+*   Partials/ui/button
+*   Buttons UI
+*
+*   @author: Emmanuel KWENE
+*   @email: kwene.emmanuel@gmail.com
+*   @website: http://www.mystro-ken.cm/
+*
+*   August 22, 2016!
+*
+*/
 
 // Activate or Disable features
 $btn-animation_exists:      true !default;
@@ -21,7 +19,7 @@ $btn-insetBoxShadow_exists: true !default;
 $btn-darken-amount:       10% !default;
 $btn-disabled-opacity:    .6 !default;
 $btn-margin:              10px auto !default;
-$btn-radius:              20px !default;
+$btn-radius:              21px !default;
 $btn-animation_duration:  .3s !default;
 
 $btn-border_style:   solid !default;
