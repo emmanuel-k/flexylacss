@@ -1,0 +1,66 @@
+/*
+*  
+* 	Partials/variables
+*
+* 	File containing variables that help 
+* 	the stylesheet project personalization.
+* 	MUST NEVER GENERATE ANY CODE!
+*
+* 	@author: Mystro Ken
+* 	@email: mystro.ken@gmail.com
+* 	@website: http://www.mystro-ken.cm/
+*
+*	August 19, 2016!
+*
+*/
+
+// ## Content
+$content-padding: 2% !default;
+
+// ## Responsive
+$columns: 12!default;
+$screen-medium: 768px !default;
+$screen-large: 1024px !default;
+
+// ## Typographie
+
+$base-face:      "Raleway", sans-serif !default;
+$base-font_size: 12px !default;
+$body-font_size: 0.8125em !default; // 13px
+$h1-font_size:   1.125em !default; // 18px
+$h2-font_size:   1em !default; // 16px
+$h3-font_size:   0.875em !default; // 14px
+
+// ## Margin & Padding
+
+$gutter: 2% !default;
+$header-height: 70px !default;
+
+// ## Animation
+
+$animation-duration: 0.3s !default;
+
+// ## Couleurs
+$color-base:         #069 !default;
+$color-base_dark:    #222 !default;
+$color-base_light:   #0176b1 !default;
+$color-base_lighter: #0b8ed0 !default;
+$color-background:   #eee !default;
+$color-texte:        #222 !default;
+
+// ## Mixin (vendors)
+
+// ## UI & Mixin (Customize)
+$input-padding: 5px 10px !default;
+//---------- Button -------------
+$btn-default-bg_color:      $color-base !default;
+$btn-medium-padding:        10px !default;
+$btn-insetBoxShadow_exists: false !default;
+$btn-border_width:          0 !default;
+$btn-font_weight:           normal !default;
+
+//---------- Burger -------------
+$burger-color:  #FFF !default;
+$burger-height: 24px !default;
+$burger-radius: 1px !default;
+$burger-width:  32px !default;

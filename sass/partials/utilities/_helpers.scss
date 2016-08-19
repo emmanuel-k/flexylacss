@@ -1,0 +1,24 @@
+// Helpers
+// Style de quelques utilités
+//===========================
+
+.txt {
+  &-center { text-align: center; }
+  &-left { text-align: left; }
+  &-right { text-align: right; }
+  &-upper { text-transform: uppercase; }
+  &-meta { opacity: .8; }
+  &-bold { font-weight: bold; }
+  &-color-base { color: $color-base; }
+}
+
+.display-block { display: block; }
+.display-none { display: none; }
+
+.cover {
+  margin: 0; padding: 0;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+

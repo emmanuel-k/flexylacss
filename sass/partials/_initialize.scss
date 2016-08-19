@@ -1,0 +1,28 @@
+/*
+*
+*	Partials/initialize
+*
+* 	Load all mixins, placeholders and functions.
+* 	MUST NEVER GENERATE ANY CODE!
+*
+* 	@author: Mystro Ken
+* 	@email: mystro.ken@gmail.com
+* 	@website: http://www.mystro-ken.cm/
+*
+*	August 19, 2016!
+*
+*/
+
+// Load compass mixins
+@import "compass";
+
+
+// Load third-party code
+@import "susy"; // for grid
+
+
+//  Now we can load ours
+//-------------------------
+@import "utilities/functions";
+@import "utilities/mixins";
+@import "utilities/placeholders";

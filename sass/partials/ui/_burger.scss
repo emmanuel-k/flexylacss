@@ -1,0 +1,61 @@
+//=============================================
+//
+//  partials/ui/_burger.scss
+//  Module graphique en charge de l'aspect
+//  du burger
+//
+//  @auteur: Emmanuel KWENE
+//  @email: kwene.emmanuel@gmail.com
+//  @siteweb: http://emmanuelkwene.com/
+//
+//=============================================
+
+//  Module burger
+//===============
+$burger-color:  #222 !default;
+$burger-height: 16px !default;
+$burger-radius: 1px !default;
+$burger-width:  22px !default;
+
+$burger-animation-duration: 0.2s !default;
+
+$burger-is_open-color: $burger-color !default;
+
+.burger {
+  cursor: pointer;
+  display: inline-block;
+  height: $burger_height;
+  //overflow: hidden;
+  position: relative;
+  vertical-align: middle;
+  width: $burger-width;
+  z-index: 9999;
+
+  & .burger-line,
+  & .burger-line:after,
+  & .burger-line:before {
+    background: $burger-color;
+    border-radius: $burger-radius;
+    display: block;
+    height: $burger-height * 0.25;
+    left: 0;
+    position: absolute;
+    transition: all ease-out $burger-animation-duration;
+    width: 100%;
+  }
+
+  .burger-line { top: $burger-height * 0.375; } // x * 3/8
+
+  .burger-line:after { content: ''; top: -$burger-height * 0.375; } // x * 3/8
+
+  .burger-line:before { content: ''; top: $burger-height * 0.375; } // x * 3/8
+
+  &.is-open {
+    .burger-line { background: rgba($burger-is_open-color, 0); left: -$burger-width; }
+
+    .burger-line:after,
+    .burger-line:before { left: $burger-width; top: 0; transform: rotate(45deg); }
+
+    .burger-line:before { transform: rotate(-45deg); }
+  }
+}

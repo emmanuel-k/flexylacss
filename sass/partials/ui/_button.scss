@@ -1,0 +1,137 @@
+//=============================================
+//
+//  partials/ui/_button.scss
+//  Module graphique en charge de l'aspect
+//  de tous les boutons
+//
+//  @auteur: Emmanuel KWENE
+//  @email: kwene.emmanuel@gmail.com
+//  @siteweb: http://emmanuelkwene.com/
+//
+//=============================================
+
+//  Module bouton
+//===============
+
+// Activate or Disable features
+$btn-animation_exists:      true !default;
+$btn-insetBoxShadow_exists: true !default;
+
+
+$btn-darken-amount:       10% !default;
+$btn-disabled-opacity:    .6 !default;
+$btn-margin:              10px auto !default;
+$btn-radius:              20px !default;
+$btn-animation_duration:  .3s !default;
+
+$btn-border_style:   solid !default;
+$btn-border_width:   1px !default;
+$btn-font_align:     center !default;
+$btn-font_color:     #fff !default;
+$btn-font_color_alt: #eee !default; // For hover & focus state
+$btn-font_family:    inherit !default;
+$btn-font_weight:    bold !default;
+$btn-font_shadow:    rgba(0,0,0,.4) !default;
+
+$btn-medium-padding:   12px !default;
+$btn-medium-font_size: 1em !default;
+$btn-large-padding:    $btn-medium-padding + $btn-medium-padding * 1/3 !default;
+$btn-large-font_size:  1.25em !default;
+
+$btn-default-bg_color: #2ba6cb !default;
+
+@mixin btn-style($bg: $btn-default-bg_color) {
+  background-color: $bg !important;
+  border-color: darken($bg, $btn-darken-amount) !important;
+  color: $btn-font_color !important;
+
+  &:hover, &:focus {
+    background-color: darken($bg, $btn-darken-amount) !important;
+    color: $btn-font_color_alt !important;
+  }
+
+  //  Des coins arrondis sont requis
+  border-radius: $btn-radius;
+}
+
+// Règles d'agencement communes aux différents types de boutons
+%module-btn {
+  line-height: 1;
+  margin: $btn-margin;
+  position: relative;
+  text-align: $btn-font_align;
+  text-shadow: 0 1px 0 $btn-font_shadow;
+
+  box-shadow: 0 1px 0 rgba(0,0,0,0.07);
+
+  @if $btn-insetBoxShadow_exists {
+    box-shadow: 0 1px 0 rgba(0,0,0,0.07), 0 1px 0 rgba(255,255,255,0.3) inset;
+  }
+
+  @if $btn-animation_exists {
+    transition: all $btn-animation_duration;
+  }
+}
+
+// Spécifie les dimensions d'un bouton de taille classique.
+%module-btn-medium {
+  @extend %module-btn;
+  padding-bottom: $btn-medium-padding * 0.75;
+  padding-top: $btn-medium-padding * 0.75;
+  padding-left: $btn-medium-padding * 2;
+  padding-right: $btn-medium-padding * 2;
+  font-size: $btn-medium-font_size;
+}
+
+// Spécifie les dimensions d'un bouton large.
+%module-btn-large {
+  @extend %module-btn;
+  padding-bottom: $btn-large-padding * 0.75;
+  padding-top: $btn-large-padding * 0.75;
+  padding-left: $btn-large-padding * 2;
+  padding-right: $btn-large-padding * 2;
+  font-size: $btn-large-font_size;
+}
+
+// Définit l'apparence commune à tous les boutons.
+%theme-btn-base {
+  border-style: $btn-border_style;
+  border-width: $btn-border_width;
+  cursor: pointer;
+  font-family: $btn-font_family;
+  font-weight: $btn-font_weight;
+  text-decoration: none;
+  &.disabled {
+    opacity: $btn-disabled-opacity ;
+  }
+}
+
+// Précise l'apparence par défaut d'un bouton.
+%theme-btn-default  {
+  @extend %theme-btn-base;
+  @include btn-style;
+}
+
+//  Sélecteurs concrets pour un bouton basique.
+.btn,
+input[type="reset"],
+input[type="button"],
+input[type="submit"],
+button {
+  @extend %module-btn-medium;
+  @extend %theme-btn-default;
+}
+
+// Afficher un bouton plus large.
+.btn-large {
+  @extend %module-btn-large;
+  @extend %theme-btn-default;
+}
+
+.btn-success {
+  @include btn-style(#2eb70d);
+}
+
+.btn-warning {
+  @include btn-style(#db4343);
+}

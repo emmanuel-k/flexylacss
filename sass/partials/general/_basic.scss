@@ -1,0 +1,48 @@
+// Basic
+// Style des elements de base
+//===========================
+*,
+*:after,
+*:before {
+  box-sizing: border-box;
+  outline: none;
+}
+
+body {
+  background-color: $color-background;
+  color: $color-texte;
+  font: normal $body-font_size $base-face;
+  height: 100%;
+  overflow-x: hidden;
+  transform-style: preserve-3d;
+  transition: all ease-out $animation-duration;
+}
+
+img {
+  border: 0;
+  height: auto;
+  max-width: 100%;
+  width: auto;
+}
+
+a {
+  color: $color-base;
+  text-decoration: none;
+  transition: all $animation-duration;
+
+  &:hover, &:active {
+    color: $color-base_lighter;
+  }
+}
+
+h1 { font-size: $h1-font_size; }
+h2 { font-size: $h2-font_size; }
+h3 { font-size: $h3-font_size; }
+
+p {
+  margin-top: 10px;
+}
+
+strong {
+  font-weight: bold;
+}

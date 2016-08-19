@@ -1,0 +1,50 @@
+/*
+*
+* 	Style
+*  
+* 	Code that will generate the final
+* 	stylesheet file.
+*
+* 	@author: Mystro Ken
+* 	@email: mystro.ken@gmail.com
+* 	@website: http://www.mystro-ken.cm/
+*
+*	August 19, 2016!
+* 
+*/
+
+@charset "UTF-8";
+
+
+//  Configuration of the stylesheet
+//-------------------------------------
+@import "partials/variables";
+@import "partials/initialize";
+
+
+//  Resetting defaults properties
+//------------------------------------
+@import "vendors/normalize/style";
+
+
+// Basic elements
+//-----------------------------------
+@import "partials/general/basic";
+@import "partials/general/links";
+@import "partials/general/headings";
+@import "partials/general/form";
+@import "partials/general/medias";
+
+@import "partials/utilities/helpers";
+
+
+//  UI components
+//-------------------------------
+@import "partials/ui/grid";
+@import "partials/ui/burger";
+@import "partials/ui/dialog";
+@import "partials/ui/button";
+
+
+//	Layout
+//-------------------------------

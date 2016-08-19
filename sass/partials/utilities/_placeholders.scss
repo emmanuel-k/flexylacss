@@ -1,0 +1,11 @@
+%clearfix { 
+// Credits: http://zerosixthree.se/
+  *zoom: 1;
+  &:before, &:after {
+    content: " ";
+    display: table;
+  }
+  &:after {
+    clear: both;
+  }
+}
