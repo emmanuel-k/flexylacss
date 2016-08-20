@@ -1,4 +1,4 @@
-/*
+/**
 *
 * 	Style
 *  
@@ -22,7 +22,7 @@
 @import "partials/initialize";
 
 
-//  Resetting defaults properties
+//  Vendors (like reset)
 //------------------------------------
 @import "vendors/normalize/style";
 
@@ -39,7 +39,7 @@
 
 
 //  UI components
-//-------------------------------
+//---------------------------------
 @import "partials/ui/grid";
 @import "partials/ui/burger";
 @import "partials/ui/dialog";
@@ -47,4 +47,4 @@
 
 
 //	Layout
-//-------------------------------
+//---------------------------------

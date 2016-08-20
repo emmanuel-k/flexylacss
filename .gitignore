@@ -1,0 +1,18 @@
+.sass-cache
+sass/partials/layout
+
+# IDE Files
+#-------------------------
+.DS_Store
+
+/nbproject/
+
+.idea/*
+
+*.xcodeproj
+
+*.tmlanguage.cache
+*.tmPreferences.cache
+*.stTheme.cache
+*.sublime-workspace
+*.sublime-project

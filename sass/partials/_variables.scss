@@ -1,4 +1,4 @@
-/*
+/**
 *  
 * 	Partials/variables
 *
@@ -13,6 +13,39 @@
 *	August 19, 2016!
 *
 */
+
+// ## Susy (Grid third-party project)
+$susy: (
+  math: fluid,
+  gutter-position: after,
+  container: auto,
+  container-position: center,
+  columns: 4,
+  gutters: .25,
+  column-width: false,
+  global-box-sizing: content-box,
+  debug: (
+    image: hide,
+    color: rgba(#66f, .25),
+    output: background,
+    toggle: top right,
+  ),
+  use-custom: (
+    background-image: true,
+    background-options: false,
+    box-sizing: true,
+    clearfix: false,
+    rem: true,
+  )
+);
+
+// ## Colors (FAKE)
+$color-primary: blue !default;
+$color-secondary: red !default;
+
+// ## Typography (FAKE)
+$typography-fontface: "Open Sans", Arial, sans-serif !default;
+$typography-fontsize: 12px !default;
 
 // ## Content
 $content-padding: 2% !default;
