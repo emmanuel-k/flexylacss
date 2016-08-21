@@ -1,0 +1,11 @@
+
+
+a {
+  color: $color-link;
+  text-decoration: none;
+
+  &:hover, 
+  &:active {
+    color: lighten($color-link,10);
+  }
+}

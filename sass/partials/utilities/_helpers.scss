@@ -1,14 +1,14 @@
 /*
 *
-* Utilities/helpers
+*   Utilities/helpers
 *  
-* Style de quelques utilités
+*   Style for helping :-p
 *
-* @author: Mystro Ken
-* @email: mystro.ken@gmail.com
-* @website: http://www.mystro-ken.cm/
+*   @author: Emmanuel KWENE
+*   @email: kwene.emmanuel@gmail.com
+*   @website: http://www.mystro-ken.cm/
 *
-* August 19, 2016!
+*   August 19, 2016!
 *
 */
 
@@ -19,16 +19,9 @@
   &-upper { text-transform: uppercase; }
   &-meta { opacity: .8; }
   &-bold { font-weight: bold; }
-  &-color-base { color: $color-base; }
+  &-color-base { color: $color-primary; }
 }
 
 .display-block { display: block; }
 .display-none { display: none; }
-
-.cover {
-  margin: 0; padding: 0;
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
-}
 

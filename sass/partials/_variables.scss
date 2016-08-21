@@ -6,24 +6,55 @@
 * 	the stylesheet project personalization.
 * 	MUST NEVER GENERATE ANY CODE!
 *
-* 	@author: Mystro Ken
-* 	@email: mystro.ken@gmail.com
-* 	@website: http://www.mystro-ken.cm/
+*   @author: Emmanuel KWENE
+*   @email: kwene.emmanuel@gmail.com
+*   @website: http://www.mystro-ken.cm/
 *
 *	August 19, 2016!
 *
 */
 
-// ## Susy (Grid third-party project)
+
+
+// 1 - ## Colors
+$color-primary:         blue !default;
+$color-primary-dark:    blue !default;
+$color-primary-light:   blue !default;
+$color-secondary:       red !default;
+$color-text-primary:    black !default;
+$color-text-secondary:  black !default;
+$color-link:            red !default;
+$color-body:            white !default;
+
+
+// 2 - ## Typography
+$typography-fontsize-h1:        25px !default;
+$typography-fontsize-h2:        25px !default;
+$typography-fontsize-h3:        25px !default;
+$typography-fontsize-h4:        25px !default;
+$typography-fontsize-h5:        25px !default;
+$typography-fontsize-h6:        25px !default;
+$typography-fontsize-body:      12px !default;
+$typography-fontsize-button:    14px !default;
+$typography-fontface-primary:   "Open Sans", Arial, sans-serif !default;
+$typography-fontface-secondary: "Roboto Slab", serif;
+
+
+// 3 - ## Fonts
+$fonts-directory: "../fonts" !default;
+
+
+// ##  Grids and Media Query
+// In this part we'll use essentially Susy and Breakpoint (third-party project)
 $susy: (
   math: fluid,
   gutter-position: after,
   container: auto,
   container-position: center,
   columns: 4,
-  gutters: .25,
-  column-width: false,
-  global-box-sizing: content-box,
+  gutters: 3rem/6rem,
+  column-width: 6rem,
+  global-box-sizing: border-box,
   debug: (
     image: hide,
     color: rgba(#66f, .25),
@@ -39,61 +70,35 @@ $susy: (
   )
 );
 
-// ## Colors (FAKE)
-$color-primary: blue !default;
-$color-secondary: red !default;
+// Default screens for media queries
+$screen-small:      600px !default;
+$screen-medium:     992px !default;
+$screen-large:      1200px !default;
+$screen-small-up:   601px !default;
+$screen-medium-up:  993px !default;
+$screen-large-up:   1201px !default;
 
-// ## Typography (FAKE)
-$typography-fontface: "Open Sans", Arial, sans-serif !default;
-$typography-fontsize: 12px !default;
 
-// ## Content
-$content-padding: 2% !default;
+// 4 - ## User Interface
 
-// ## Responsive
-$columns: 12!default;
-$screen-medium: 768px !default;
-$screen-large: 1024px !default;
+// Animations
+$animation-duration: 600ms !default;
 
-// ## Typographie
-
-$base-face:      "Raleway", sans-serif !default;
-$base-font_size: 12px !default;
-$body-font_size: 0.8125em !default; // 13px
-$h1-font_size:   1.125em !default; // 18px
-$h2-font_size:   1em !default; // 16px
-$h3-font_size:   0.875em !default; // 14px
-
-// ## Margin & Padding
-
-$gutter: 2% !default;
-$header-height: 70px !default;
-
-// ## Animation
-
-$animation-duration: 0.3s !default;
-
-// ## Couleurs
-$color-base:         #069 !default;
-$color-base_dark:    #222 !default;
-$color-base_light:   #0176b1 !default;
-$color-base_lighter: #0b8ed0 !default;
-$color-background:   #eee !default;
-$color-texte:        #222 !default;
-
-// ## Mixin (vendors)
-
-// ## UI & Mixin (Customize)
+// Form elements
 $input-padding: 5px 10px !default;
-//---------- Button -------------
-$btn-default-bg_color:      $color-base !default;
+
+//  button
+$btn-default-bg_color:      $color-primary !default;
 $btn-medium-padding:        10px !default;
 $btn-insetBoxShadow_exists: false !default;
 $btn-border_width:          0 !default;
 $btn-font_weight:           normal !default;
 
-//---------- Burger -------------
+//  burger
 $burger-color:  #FFF !default;
 $burger-height: 24px !default;
 $burger-radius: 1px !default;
 $burger-width:  32px !default;
+
+
+// 5 - ## Layout
