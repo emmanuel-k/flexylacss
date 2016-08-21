@@ -13,29 +13,34 @@
 *	August 19, 2016!
 *
 */
+/*!
+ * Flexyla CSS v1 - August 2016
+ * written by Emmanuel KWENE • kwene.emmanuel@gmail.com • http://www.mystro-ken.cm
+ */
 
+@import "variables-vendors";
 
 
 // 1 - ## Colors
-$color-primary:         blue !default;
-$color-primary-dark:    blue !default;
-$color-primary-light:   blue !default;
+$color-primary:         #135ba7 !default;
+$color-primary-dark:    darken($color-primary, 10) !default;
+$color-primary-light:   lighten($color-primary, 10) !default;
 $color-secondary:       red !default;
-$color-text-primary:    black !default;
-$color-text-secondary:  black !default;
-$color-link:            red !default;
-$color-body:            white !default;
+$color-text-primary:    #343434 !default;
+$color-text-secondary:  #757575 !default;
+$color-link:            $color-primary !default;
+$color-body:            #F2F2F2 !default;
 
 
 // 2 - ## Typography
-$typography-fontsize-h1:        25px !default;
-$typography-fontsize-h2:        25px !default;
-$typography-fontsize-h3:        25px !default;
-$typography-fontsize-h4:        25px !default;
-$typography-fontsize-h5:        25px !default;
-$typography-fontsize-h6:        25px !default;
-$typography-fontsize-body:      12px !default;
-$typography-fontsize-button:    14px !default;
+$typography-fontsize-h1:        2em !default;
+$typography-fontsize-h2:        1.6em !default;
+$typography-fontsize-h3:        1.2em !default;
+$typography-fontsize-h4:        1em !default;
+$typography-fontsize-h5:        0.9em !default;
+$typography-fontsize-h6:        0.8em !default;
+$typography-fontsize-body:      0.8em !default;
+$typography-fontsize-button:    0.9em !default;
 $typography-fontface-primary:   "Open Sans", Arial, sans-serif !default;
 $typography-fontface-secondary: "Roboto Slab", serif;
 
@@ -48,7 +53,7 @@ $fonts-directory: "../fonts" !default;
 // In this part we'll use essentially Susy and Breakpoint (third-party project)
 $susy: (
   math: fluid,
-  gutter-position: after,
+  gutter-position: inside-static,
   container: auto,
   container-position: center,
   columns: 4,
@@ -86,6 +91,16 @@ $animation-duration: 600ms !default;
 
 // Form elements
 $input-padding: 5px 10px !default;
+$input-background: rgba(0,0,0,0.03) !default;
+$input-text-align: left !default;
+$input-text-color: $color-text-primary !default;
+$input-border-width: 1px !default;
+$input-border-style: solid !default;
+$input-border-color: #d8d8d8 #d8d8d8 #e0e0e0 !default; // #d8d8d8 #d8d8d8 #e0e0e0
+$input-border-radius: 20px !default;
+$input-shadow: 1px 1px 2px rgba(0,0,0,0.07) inset !default;
+$input-focused-shadow: 1px 1px 2px rgba(0,0,0,0.06) !default;
+$input-focused-background: #FFF !default;
 
 //  button
 $btn-default-bg_color:      $color-primary !default;
