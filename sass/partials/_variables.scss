@@ -15,7 +15,7 @@
 */
 /*!
  * Flexyla CSS v1 - August 2016
- * written by Emmanuel KWENE • kwene.emmanuel@gmail.com • http://www.mystro-ken.cm
+ * License: MIT • by Emmanuel KWENE • kwene.emmanuel@gmail.com • http://www.mystro-ken.cm
  */
 
 @import "variables-vendors";
@@ -56,7 +56,7 @@ $susy: (
   gutter-position: inside-static,
   container: auto,
   container-position: center,
-  columns: 4,
+  columns: 12,
   gutters: 3rem/6rem,
   column-width: 6rem,
   global-box-sizing: border-box,
@@ -90,17 +90,17 @@ $screen-large-up:   1201px !default;
 $animation-duration: 600ms !default;
 
 // Form elements
-$input-padding: 5px 10px !default;
-$input-background: rgba(0,0,0,0.03) !default;
-$input-text-align: left !default;
-$input-text-color: $color-text-primary !default;
-$input-border-width: 1px !default;
-$input-border-style: solid !default;
-$input-border-color: #d8d8d8 #d8d8d8 #e0e0e0 !default; // #d8d8d8 #d8d8d8 #e0e0e0
-$input-border-radius: 20px !default;
-$input-shadow: 1px 1px 2px rgba(0,0,0,0.07) inset !default;
-$input-focused-shadow: 1px 1px 2px rgba(0,0,0,0.06) !default;
-$input-focused-background: #FFF !default;
+$input-padding:             5px 10px !default;
+$input-background:          rgba(0,0,0,0.03) !default;
+$input-text-align:          left !default;
+$input-text-color:          $color-text-primary !default;
+$input-border-width:        1px !default;
+$input-border-style:        solid !default;
+$input-border-color:        #d8d8d8 #d8d8d8 #e0e0e0 !default; // #d8d8d8 #d8d8d8 #e0e0e0
+$input-border-radius:       0 !default;
+$input-shadow:              1px 1px 2px rgba(0,0,0,0.07) inset !default;
+$input-focused-shadow:      1px 1px 2px rgba(0,0,0,0.06) !default;
+$input-focused-background:  #FFF !default;
 
 //  button
 $btn-default-bg_color:      $color-primary !default;
