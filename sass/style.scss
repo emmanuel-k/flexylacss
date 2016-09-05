@@ -23,12 +23,14 @@
 //  Vendors (like reset)
 //------------------------------------
 @import "vendors/normalize/style";
-@import "vendors/animate/animate";
+//@import "vendors/animate/animate";
 @import "vendors/fontawesome/fontawesome";
 
 
 // Basic elements
 //-----------------------------------
+@import "partials/layout/fonts";
+
 @import "partials/global/basic";
 @import "partials/global/links";
 @import "partials/global/headings";
@@ -43,9 +45,10 @@
 //@import "partials/ui/grid";
 //@import "partials/ui/dialog";
 //@import "partials/ui/burger";
-@import "partials/ui/button";
+//@import "partials/ui/button";
 
 
 //	Layout
 //---------------------------------
-@import "partials/layout/global";
+@import "partials/layout/general";
+@import "partials/layout/content";
