@@ -29,7 +29,7 @@
 
 // Basic elements
 //-----------------------------------
-@import "partials/layout/fonts";
+//@import "partials/layout/fonts";
 
 @import "partials/global/basic";
 @import "partials/global/links";
@@ -42,13 +42,17 @@
 
 //  UI components
 //---------------------------------
-//@import "partials/ui/grid";
+@import "partials/ui/grid";
 //@import "partials/ui/dialog";
-//@import "partials/ui/burger";
-//@import "partials/ui/button";
+@import "partials/ui/burger";
+@import "partials/ui/button";
+@import "partials/ui/table";
+@import "partials/ui/wave";
 
 
 //	Layout
 //---------------------------------
-@import "partials/layout/general";
-@import "partials/layout/content";
+@import "partials/layout/global";
+//@import "partials/layout/header";
+//@import "partials/layout/navbar";
+//@import "partials/layout/main";

@@ -6,56 +6,74 @@
 //
 //  @auteur: Emmanuel KWENE
 //  @email: kwene.emmanuel@gmail.com
-//  @siteweb: http://emmanuelkwene.com/
+//  @siteweb: http://www.mystro-ken.cm/
 //
 //=============================================
 
+$burger--transition-duration: 0.4s;
+$burger--transition-timing-function: ease-out;
+$burger__line--color: rgba(#FFF, 1) !default;
+$burger--opened__line--color: rgba(#FFF, 1) !default;
+$burger__line--height: 1px !default;
+$burger__line--width: 22px !default;
+$burger__line--spacing: 5px !default;
+$burger__line--border-radius: 0 !default;
+
 //  Module burger
 //===============
-$burger-color:  #222 !default;
-$burger-height: 16px !default;
-$burger-radius: 1px !default;
-$burger-width:  22px !default;
-
-$burger-animation-duration: 0.2s !default;
-
-$burger-is_open-color: $burger-color !default;
 
 .burger {
+  background: $burger__line--color;
   cursor: pointer;
   display: inline-block;
-  height: $burger_height;
-  //overflow: hidden;
+  height: $burger__line--height;
   position: relative;
   vertical-align: middle;
-  width: $burger-width;
+  width: $burger__line--width;
   z-index: 9999;
+  transition: all $burger--transition-timing-function $burger--transition-duration;
 
-  & .burger-line,
-  & .burger-line:after,
-  & .burger-line:before {
-    background: $burger-color;
-    border-radius: $burger-radius;
-    display: block;
-    height: $burger-height * 0.25;
-    left: 0;
+  &::before,
+  &::after {
+    content: '';
+    z-index: 9999;
     position: absolute;
-    transition: all ease-out $burger-animation-duration;
-    width: 100%;
+    background: $burger__line--color;
+    height: $burger__line--height;
+    width: $burger__line--width;
+    left: 0;
+    transition: transform $burger--transition-timing-function $burger--transition-duration;
   }
 
-  .burger-line { top: $burger-height * 0.375; } // x * 3/8
-
-  .burger-line:after { content: ''; top: -$burger-height * 0.375; } // x * 3/8
-
-  .burger-line:before { content: ''; top: $burger-height * 0.375; } // x * 3/8
-
-  &.is-open {
-    .burger-line { background: rgba($burger-is_open-color, 0); left: -$burger-width; }
-
-    .burger-line:after,
-    .burger-line:before { left: $burger-width; top: 0; transform: rotate(45deg); }
-
-    .burger-line:before { transform: rotate(-45deg); }
+  &::before {
+    top: -$burger__line--spacing;
   }
+
+  &::after {
+    bottom: -$burger__line--spacing;
+  }
+
+  &.burger--opened {
+    background: $burger--opened__line--color;
+    left: -$burger__line--width;
+
+    &::before,
+    &::after {
+      background: $burger--opened__line--color;
+      left: $burger__line--width;
+      transform-origin: ($burger__line--width/2) ($burger__line--height/2);
+    }
+
+    &::before {
+      top: 0;
+      transform: rotate(45deg) translateZ(0);
+    }
+
+    &::after {
+      bottom: 0;
+      transform: rotate(-45deg) translateZ(0);
+    }
+
+  }
+
 }

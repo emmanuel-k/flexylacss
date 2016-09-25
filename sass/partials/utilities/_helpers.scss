@@ -20,6 +20,7 @@
   &-meta { opacity: .8; }
   &-bold { font-weight: bold; }
   &-color-base { color: $color-primary; }
+  &-color-default { color: $color-text-primary; }
 }
 
 .display-block { display: block; }

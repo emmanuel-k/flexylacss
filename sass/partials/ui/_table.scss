@@ -1,0 +1,47 @@
+
+$table__border--collapse: collapse !default; 
+$table__th--alignment: left !default;
+$table__th--font-weight: 400 !default;
+$table--striped-border-radius: 1px !default;
+$table__divider-color: rgba(63,192,203,.1) !default;
+$table__head--padding: 0.6rem !default;
+$table__body--padding: $table__head--padding !default;
+
+.table {
+	width: 100%;
+	max-width: 100%;
+	border-collapse: $table__border--collapse;
+
+	th {
+		text-align: $table__th--alignment;
+		font-weight: $table__th--font-weight;
+		padding: $table__head--padding;
+	}
+
+	td {
+		vertical-align: middle;
+		padding: $table__body--padding;
+	}
+
+	thead > tr > th {
+		border-bottom: 1px solid $table__divider-color;
+	}
+}
+
+
+.table--striped {
+	
+
+	tbody > tr:odd > th {
+		background: $table__divider-color;
+	}
+}
+
+.table--filled {
+	box-shadow: 0 0 1px rgba(#000,0.12), 0 1px 1px rgba(#000,0.24);
+	border-radius: $table--striped-border-radius;
+
+	thead > tr > th {
+		background: rgba(#000, 0.03);
+	}
+}

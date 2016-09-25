@@ -1,0 +1,23 @@
+
+.wave-effect {
+  z-index: 1;
+  position: relative;
+  user-select: none;
+  overflow: hidden;
+  transform: translateZ(0);
+}
+
+.wave {
+  position: absolute;
+  border-radius: 50%;
+  opacity: .7;
+  z-index: -1;
+  background: rgba(#FFF, 0.25);
+  transition: transform 1s cubic-bezier(0.5, 1.11, 0.32, 1), opacity 0.9s cubic-bezier(0.5, 1.11, 0.32, 1);
+  transform: scale(0);
+  pointer-events: none;
+}
+
+.wave-black .wave {
+  background: rgba(#000, 0.15);
+}

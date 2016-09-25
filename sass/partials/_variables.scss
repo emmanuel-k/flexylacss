@@ -22,14 +22,14 @@
 
 
 // 1 - ## Colors
-$color-primary:         #135ba7 !default;
+$color-primary:         #33b2bd !default;
 $color-primary-dark:    darken($color-primary, 10) !default;
 $color-primary-light:   lighten($color-primary, 10) !default;
-$color-secondary:       red !default;
-$color-text-primary:    #343434 !default;
-$color-text-secondary:  #757575 !default;
+$color-secondary:       #F89406 !default;
+$color-text-primary:    rgba(#FFF, 1) !default;
+$color-text-secondary:  rgba(#FFF, 0.8) !default;
 $color-link:            $color-primary !default;
-$color-body:            #F4F6FA !default;
+$color-body:            #4be5f2 !default;
 $color-info:            #144E93 !default;
 $color-error:           #991717 !default;
 $color-warning:         #D8CA21 !default;
@@ -37,17 +37,18 @@ $color-success:         #237F0D !default;
 
 
 // 2 - ## Typography
-$typography-fontsize-h1:        2em !default;
-$typography-fontsize-h2:        1.6em !default;
-$typography-fontsize-h3:        1.2em !default;
-$typography-fontsize-h4:        1em !default;
-$typography-fontsize-h5:        0.9em !default;
-$typography-fontsize-h6:        0.8em !default;
-$typography-fontsize-body:      0.9em !default;
-$typography-fontsize-button:    0.95em !default;
-$typography-fontface-primary:   Gibson,"Open sans",Helvetica,Arial,sans-serif !default;
+$typography-fontsize-h1:        1.6rem !default;
+$typography-fontsize-h2:        1.4rem !default;
+$typography-fontsize-h3:        1.1rem !default;
+$typography-fontsize-h4:        1rem !default;
+$typography-fontsize-h5:        0.9rem !default;
+$typography-fontsize-h6:        0.85rem !default;
+$typography-fontsize-body:      0.85rem !default;
+$typography-fontsize-button:    $typography-fontsize-body !default;
+$typography-fontface-primary:   "Open sans",Helvetica,Arial,sans-serif !default;
 $typography-fontface-secondary: Lora,Georgia,serif !default;
 $typography-fontweight-body:    300 !default;
+$typography-fontweight-heading: 300 !default;
 
 
 // 3 - ## Fonts
@@ -96,29 +97,50 @@ $animation-duration: 400ms !default;
 
 // Form elements
 $input-padding:             5px 10px !default;
-$input-background:          rgba(0,0,0,0.03) !default;
+$input-background:          rgba(#000,0.03) !default;
 $input-text-align:          left !default;
-$input-text-color:          $color-text-primary !default;
+$input-text-color:          $color-text-secondary !default;
 $input-border-width:        1px !default;
 $input-border-style:        solid !default;
-$input-border-color:        #d8d8d8 #d8d8d8 #e0e0e0 !default; // #d8d8d8 #d8d8d8 #e0e0e0
-$input-border-radius:       0 !default;
+$input-border-color:        rgba(#FFF, 0.1) !default; 
+$input-border-radius:       1px !default;
 $input-shadow:              1px 1px 2px rgba(0,0,0,0.07) inset !default;
-$input-focused-shadow:      1px 1px 2px rgba(0,0,0,0.06) !default;
-$input-focused-background:  #FFF !default;
+$input-focused-shadow:      1px 1px 2px rgba(1,37,43,.1),1px 1px 2px rgba(#000,.03) inset !default;
+$input-focused-background:  rgba(#FFF, 0.15) !default;
 
 //  button
 $btn-default-bg_color:      $color-primary !default;
-$btn-medium-padding:        10px !default;
+$btn-animation_exists:      true !default;
 $btn-insetBoxShadow_exists: false !default;
-$btn-border_width:          0 !default;
-$btn-font_weight:           normal !default;
+
+$btn-darken-amount:       10% !default;
+$btn-disabled-opacity:    .6 !default;
+$btn-margin:              10px auto !default;
+$btn-radius:              21px !default;
+$btn-animation_duration:  .4s !default;
+
+$btn-border_style:   solid !default;
+$btn-border_width:   0 !default;
+$btn-font_align:     center !default;
+$btn-font_color:     #fff !default;
+$btn-font_color_alt: #FFF !default; // For hover & focus state
+$btn-font_family:    inherit !default;
+$btn-font_weight:    inherit !default;
+$btn--text-shadow:   0 0 1px rgba(#000, 0.12), 0 1px 1px rgba(#000, 0.24) !default;
+
+$btn-medium-padding:   10px !default;
+$btn-medium-font_size: 1em !default;
+$btn-large-padding:    $btn-medium-padding + $btn-medium-padding * 1/3 !default;
+$btn-large-font_size:  1.25em !default;
+
 
 //  burger
-$burger-color:  #FFF !default;
-$burger-height: 24px !default;
-$burger-radius: 1px !default;
-$burger-width:  32px !default;
+$burger-color:  rgba(#FFF, 1) !default;
+$burger-height: 16px !default;
+$burger-radius: 0 !default;
+$burger-width:  22px !default;
+$burger-animation-duration: 0.2s !default;
+$burger-is_open-color: $burger-color !default;
 
 
 // 5 - ## Layout
