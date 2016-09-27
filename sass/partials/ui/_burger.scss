@@ -10,7 +10,7 @@
 //
 //=============================================
 
-$burger--transition-duration: 0.4s;
+$burger--transition-duration: 221ms;
 $burger--transition-timing-function: ease-out;
 $burger__line--color: rgba(#FFF, 1) !default;
 $burger--opened__line--color: rgba(#FFF, 1) !default;
@@ -23,53 +23,65 @@ $burger__line--border-radius: 0 !default;
 //===============
 
 .burger {
-  background: $burger__line--color;
   cursor: pointer;
   display: inline-block;
-  height: $burger__line--height;
   position: relative;
-  vertical-align: middle;
+  //vertical-align: middle;
+  height: (3 * $burger__line--height) + (2 * $burger__line--spacing);
+  line-height: (3 * $burger__line--height) + (2 * $burger__line--spacing);
   width: $burger__line--width;
   z-index: 9999;
+}
+
+
+.burger__line {
+  display: inline-block;
+  background: $burger__line--color;
+  height: $burger__line--height;
+  width: $burger__line--width;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
   transition: all $burger--transition-timing-function $burger--transition-duration;
 
-  &::before,
-  &::after {
+  &:before,
+  &:after {
     content: '';
-    z-index: 9999;
     position: absolute;
     background: $burger__line--color;
     height: $burger__line--height;
     width: $burger__line--width;
     left: 0;
-    transition: transform $burger--transition-timing-function $burger--transition-duration;
+    transition: all $burger--transition-timing-function $burger--transition-duration;
   }
 
-  &::before {
+  &:before {
     top: -$burger__line--spacing;
   }
 
-  &::after {
+  &:after {
     bottom: -$burger__line--spacing;
   }
 
-  &.burger--opened {
-    background: $burger--opened__line--color;
-    left: -$burger__line--width;
 
-    &::before,
-    &::after {
+  .burger--opened & {
+    background: rgba($burger--opened__line--color, 0);
+    left: -$burger__line--width;
+    transform: translateZ(0);
+
+    &:before,
+    &:after {
       background: $burger--opened__line--color;
       left: $burger__line--width;
-      transform-origin: ($burger__line--width/2) ($burger__line--height/2);
     }
 
-    &::before {
+    &:before {
       top: 0;
       transform: rotate(45deg) translateZ(0);
     }
 
-    &::after {
+    &:after {
       bottom: 0;
       transform: rotate(-45deg) translateZ(0);
     }
