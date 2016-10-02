@@ -84,12 +84,9 @@
   @include btn-style;
 }
 
+
 //  Sélecteurs concrets pour un bouton basique.
-.btn,
-input[type="reset"],
-input[type="button"],
-input[type="submit"],
-button {
+.btn {
   @extend %module-btn-medium;
   @extend %theme-btn-default;
 }
