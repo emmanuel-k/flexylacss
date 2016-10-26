@@ -1,0 +1,51 @@
+/**
+*
+* 	Partials/ui/_gallery.scss
+*
+* 	Used to display stack of images (for example)
+*   into a grid system
+*
+*   @author: Emmanuel KWENE
+*   @email: kwene.emmanuel@gmail.com
+*   @website: http://www.mystro-ken.cm/
+*
+*	October 23, 2016!
+*
+*/
+/*!
+ * Flexyla CSS v1 - August 2016
+ * License: MIT • by Emmanuel KWENE • kwene.emmanuel@gmail.com • http://www.mystro-ken.cm
+ */
+
+
+// Variables
+$gallery--gutter: gutter() !default;
+$gallery__item--border: 1px solid rgba(#FFF, 0.1) !default;
+$gallery__item--width-margin: (3 * $gallery--gutter)/4 !default;
+
+
+
+.gallery {
+  font-size: 0;
+
+  figure {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+  }
+}
+
+.gallery__item {
+  font-size: $typography-fontsize-body;
+  display: inline-block;
+  border: $gallery__item--border;
+  margin-bottom: $gallery--gutter;
+  margin-right: $gallery--gutter;
+  width: calc(25% - #{$gallery__item--width-margin});
+  vertical-align: top;
+}
+
+.gallery__item:nth-of-type(4n) {
+  margin-right: 0;
+}

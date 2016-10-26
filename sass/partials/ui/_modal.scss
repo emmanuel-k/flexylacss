@@ -1,0 +1,76 @@
+
+$modal__text--color: rgba(#000, 0.80) !default;
+$modal__mask--background: rgba(#000, 0.80) !default;
+$modal__header--height: 6vh !default;
+$modal__footer--height: 7vh !default;
+$modal__container--background: rgba(#FFF, 1) !default;
+
+.modal {
+  background: $modal__mask--background;
+  color: $modal__text--color;
+  position: fixed;
+  top: 0;  bottom: 0;
+  left: 0; right: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 8;
+  display: none;
+
+  @include susy-breakpoint($screen-small-up) {
+    //width: 80%;
+    padding: 5vh;
+  }
+}
+
+.modal__container {
+  background: $modal__container--background;
+  width: 100vw;
+  height: 100vh;
+  margin: 0 auto;
+  position: relative;
+  padding-bottom: $modal__footer--height;
+
+  @include susy-breakpoint($screen-small-up) {
+    width: calc(100vw - 10vh);
+    height: calc(100vh - 10vh);
+  }
+
+  @include susy-breakpoint($screen-medium-up) {
+    //width: 70%;
+  }
+}
+
+.modal__header {
+  @include container;
+  //border-bottom: 1px solid #EEE;
+  //height: $modal__header--height;
+  //line-height: $modal__header--height;
+  padding: gutter()/2 0;
+}
+
+.modal__title {
+  @include span(11 of 12);
+}
+
+.modal__closer {
+  @include span(1 of 12 last);
+  text-align: right;
+  cursor: pointer;
+}
+
+.modal__content {
+  //padding: gutter();
+  overflow: auto;
+}
+
+.modal__footer {
+  border-top: 1px solid #EEE;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: $modal__footer--height;
+  line-height: $modal__footer--height;
+  padding: 0 gutter();
+  text-align: right;
+}
