@@ -44,6 +44,20 @@ $gallery__item--width-margin: (3 * $gallery--gutter)/4 !default;
   margin-right: $gallery--gutter;
   width: calc(25% - #{$gallery__item--width-margin});
   vertical-align: top;
+  background: rgba(#FFF, 0.1);
+
+  position: relative;
+  overflow: hidden;
+  padding-bottom: 20%;
+
+  img {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+  }
 }
 
 .gallery__item:nth-of-type(4n) {
