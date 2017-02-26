@@ -14,11 +14,13 @@
 *
 */
 /*!
- * Flexyla CSS v1 - August 2016
+ * Flexyla CSS v1.2 - February 2017
  * License: MIT • by Emmanuel KWENE • kwene.emmanuel@gmail.com • http://www.mystro-ken.cm
  */
 
-@import "variables-vendors";
+// Set somme vendors variables
+// ## Font Awesome
+$fa-font-path: "../fonts/fontawesome" !default;
 
 
 // 1 - ## Colors

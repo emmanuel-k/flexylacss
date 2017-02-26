@@ -1,5 +1,8 @@
 .sass-cache
+sass/style.scss
 sass/partials/layout
+sass/partials/_variables.scss
+sass/partials/_initialize.scss
 
 # IDE Files
 #-------------------------
