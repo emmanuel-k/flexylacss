@@ -19,9 +19,9 @@
 //-------------------------------------
 @import 'vendors/breakpoint-2.x.x/stylesheets/breakpoint';
 @import 'vendors/susy-2.2.12/sass/susy';
-@import "utilities/functions";
-@import "utilities/mixins";
-@import "utilities/placeholders";
+@import "partials/utilities/functions";
+@import "partials/utilities/mixins";
+@import "partials/utilities/placeholders";
 
 //	Set variables
 //-------------------------------------
