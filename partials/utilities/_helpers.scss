@@ -1,0 +1,30 @@
+/*
+*
+*   Utilities/helpers
+*  
+*   Style for helping :-p
+*
+*   @author: Emmanuel KWENE
+*   @email: kwene.emmanuel@gmail.com
+*   @website: http://www.mystro-ken.cm/
+*
+*   August 19, 2016!
+*
+*/
+
+.txt {
+  &-center { text-align: center; }
+  &-left { text-align: left; }
+  &-right { text-align: right; }
+  &-upper { text-transform: uppercase; }
+  &-meta { opacity: .8; }
+  &-bold { font-weight: bold; }
+  &-color-base { color: $color-primary; }
+  &-color-default { color: $color-text-primary; }
+}
+
+.display-block { display: block; }
+.display-none { display: none; }
+
+.width-full { width: 100%; }
+

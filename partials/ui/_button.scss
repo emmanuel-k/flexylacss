@@ -1,0 +1,106 @@
+/**
+*
+*   Partials/ui/button
+*   Buttons UI
+*
+*   @author: Emmanuel KWENE
+*   @email: kwene.emmanuel@gmail.com
+*   @website: http://www.mystro-ken.cm/
+*
+*   August 22, 2016!
+*
+*/
+
+
+@mixin btn-style($bg: $btn-default-bg_color) {
+  background-color: $bg !important;
+  border-color: darken($bg, $btn-darken-amount) !important;
+  color: $btn-font_color !important;
+
+  &:hover, &:focus {
+    background-color: darken($bg, $btn-darken-amount) !important;
+    color: $btn-font_color_alt !important;
+  }
+
+  //  Des coins arrondis sont requis
+  border-radius: $btn-radius;
+}
+
+// Règles d'agencement communes aux différents types de boutons
+%module-btn {
+  line-height: 1;
+  margin: $btn-margin;
+  position: relative;
+  text-align: $btn-font_align;
+  text-shadow: $btn--text-shadow;
+
+  box-shadow: 0 1px 0 rgba(0,0,0,0.07);
+
+  @if $btn-insetBoxShadow_exists {
+    box-shadow: 0 1px 0 rgba(0,0,0,0.07), 0 1px 0 rgba(255,255,255,0.3) inset;
+  }
+
+  @if $btn-animation_exists {
+    transition: all $btn-animation_duration;
+  }
+}
+
+// Spécifie les dimensions d'un bouton de taille classique.
+%module-btn-medium {
+  @extend %module-btn;
+  padding-bottom: $btn-medium-padding * 0.75;
+  padding-top: $btn-medium-padding * 0.75;
+  padding-left: $btn-medium-padding * 2;
+  padding-right: $btn-medium-padding * 2;
+  font-size: $btn-medium-font_size;
+}
+
+// Spécifie les dimensions d'un bouton large.
+%module-btn-large {
+  @extend %module-btn;
+  padding-bottom: $btn-large-padding * 0.75;
+  padding-top: $btn-large-padding * 0.75;
+  padding-left: $btn-large-padding * 2;
+  padding-right: $btn-large-padding * 2;
+  font-size: $btn-large-font_size;
+}
+
+// Définit l'apparence commune à tous les boutons.
+%theme-btn-base {
+  border-style: $btn-border_style;
+  border-width: $btn-border_width;
+  cursor: pointer;
+  font-family: $btn-font_family;
+  font-weight: $btn-font_weight;
+  text-decoration: none;
+  &.disabled {
+    opacity: $btn-disabled-opacity ;
+  }
+}
+
+// Précise l'apparence par défaut d'un bouton.
+%theme-btn-default  {
+  @extend %theme-btn-base;
+  @include btn-style;
+}
+
+
+//  Sélecteurs concrets pour un bouton basique.
+.btn {
+  @extend %module-btn-medium;
+  @extend %theme-btn-default;
+}
+
+// Afficher un bouton plus large.
+.btn-large {
+  @extend %module-btn-large;
+  @extend %theme-btn-default;
+}
+
+.btn-success {
+  @include btn-style(#2eb70d);
+}
+
+.btn-warning {
+  @include btn-style(#db4343);
+}

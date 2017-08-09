@@ -1,0 +1,66 @@
+/**
+*
+* 	Style
+*  
+* 	Code that will generate the final
+* 	stylesheet file.
+*
+*   @author: Emmanuel KWENE
+*   @email: kwene.emmanuel@gmail.com
+*   @website: http://www.mystro-ken.cm/
+*
+*	August 9, 2017!
+* 
+*/
+
+
+//  Load some utilities
+//	They don't generate any code!
+//-------------------------------------
+@import 'vendors/breakpoint-2.x.x/stylesheets/breakpoint';
+@import 'vendors/susy-2.2.12/sass/susy';
+@import "utilities/functions";
+@import "utilities/mixins";
+@import "utilities/placeholders";
+
+//	Set variables
+//-------------------------------------
+@import "partials/variables";
+
+//  Load vendors
+//------------------------------------
+@import "vendors/normalize/style";
+@import "vendors/animate/animate";
+@import "vendors/fontawesome/fontawesome";
+
+// Load basic elements
+//-----------------------------------
+//@import "partials/layout/fonts";
+
+@import "partials/global/basic";
+@import "partials/global/links";
+@import "partials/global/headings";
+@import "partials/global/form";
+@import "partials/global/medias";
+
+@import "partials/utilities/helpers";
+
+//  Load modules (ui elements)
+//---------------------------------
+@import "partials/ui/grid";
+@import "partials/ui/gallery";
+@import "partials/ui/dialog";
+@import "partials/ui/modal";
+@import "partials/ui/tabs-widget";
+@import "partials/ui/burger";
+@import "partials/ui/button";
+@import "partials/ui/table";
+@import "partials/ui/wave";
+@import "partials/ui/selectable";
+
+//	Load layout components
+//---------------------------------
+//@import "partials/layout/global";
+//@import "partials/layout/header";
+//@import "partials/layout/navbar";
+//@import "partials/layout/main";
