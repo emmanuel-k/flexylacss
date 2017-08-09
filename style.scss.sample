@@ -48,7 +48,6 @@
 //  Load modules (ui elements)
 //---------------------------------
 @import "partials/ui/grid";
-@import "partials/ui/gallery";
 @import "partials/ui/dialog";
 @import "partials/ui/modal";
 @import "partials/ui/tabs-widget";
