@@ -1,0 +1,28 @@
+/**
+* 
+*   Partials/global/basic
+*
+*   Style of basic tag elements
+*
+*   @author: Emmanuel KWENE
+*   @email: kwene.emmanuel@gmail.com
+*   @website: http://www.mystro-ken.cm/
+*
+*   August 21, 2016!
+* 
+*/
+
+
+*,
+*:after,
+*:before {
+  box-sizing: border-box;
+  outline: none;
+}
+
+
+body {
+  background-color: $color-body;
+  color: $color-text-primary;
+  font: $typography-fontweight-body $typography-fontsize-body $typography-fontface-primary;
+}
